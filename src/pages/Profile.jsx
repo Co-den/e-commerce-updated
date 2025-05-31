@@ -82,7 +82,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white from-black via-green-950 to-black text-white font-mono p-6">
+    <div className="min-h-screen bg-white from-black via-green-950 to-black text-white font-inter p-6">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Profile Card */}
         <div className="bg-white/10 backdrop-blur-md border border-yellow-500/30 rounded-2xl shadow-xl p-6 hover:shadow-yellow-500/50 transition-all duration-300">
