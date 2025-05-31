@@ -1,18 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const baseURL =
-  import.meta?.env?.VITE_API_URL ||
-  "https://project-1-207l.onrender.com";
-
-<<<<<<< HEAD
-
-=======
-const api = axios.create({
-  baseURL,
-});
->>>>>>> bfd326b (new commit)
-
 // Helper function for token retrieval
 const getToken = () => localStorage.getItem("token");
 
