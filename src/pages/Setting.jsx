@@ -88,8 +88,8 @@ const Settings = () => {
   // Container style based on theme:
   const containerStyle =
     theme === "dark"
-      ? "min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white font-mono p-6"
-      : "min-h-screen bg-white text-gray-900 font-sans p-6";
+      ? "min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white font-inter p-6"
+      : "min-h-screen bg-white text-gray-900 font-inter p-6";
 
   // Card style: use a translucent background in dark mode and a solid white background in light mode.
   const cardStyle =
