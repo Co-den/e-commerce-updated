@@ -55,7 +55,6 @@ export const updateUser = createAsyncThunk(
           message: "Unauthorized: No token found",
         });
 
-<<<<<<< HEAD
       const response = await axios.put(
         `https://project-1-b69v.onrender.com/api/auth/updateUser/${id}`,
         userData,
@@ -66,14 +65,7 @@ export const updateUser = createAsyncThunk(
           },
         }
       );
-=======
-      const response = await api.put(`/api/auth/updateUser/${id}`, userData, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
->>>>>>> bfd326b (new commit)
+
 
       localStorage.setItem("user", JSON.stringify(response.data.user));
       return response.data.user;
