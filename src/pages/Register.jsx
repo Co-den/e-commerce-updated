@@ -50,10 +50,34 @@ const Register = () => {
           {error && <div className="mb-4 p-2 bg-red-500 text-white rounded">{error}</div>}
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <input type="text" placeholder="Name" className="w-full p-3 border border-gray-400 rounded bg-white text-black" />
-            <input type="email" placeholder="Email" className="w-full p-3 border border-gray-400 rounded bg-white text-black" />
-            <input type="password" placeholder="Password" className="w-full p-3 border border-gray-400 rounded bg-white text-black" />
-            <input type="password" placeholder="Confirm Password" className="w-full p-3 border border-gray-400 rounded bg-white text-black" />
+                 <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
 
             <button type="submit" className="w-full bg-green text-white hover:bg-green py-3 rounded-lg transition-all font-inter" disabled={loading}>
               {loading ? "Registering..." : "Register"}
