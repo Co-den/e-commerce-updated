@@ -7,16 +7,7 @@ import { addToCart } from "../redux/cartSlice";
 import Alert from "../components/Alert";
 import axios from "axios";
 
-const baseURL =
-  import.meta?.env?.VITE_API_URL || "https://project-1-207l.onrender.com";
 
-<<<<<<< HEAD
-=======
-const api = axios.create({
-  baseURL,
-});
-
->>>>>>> bfd326b (new commit)
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
