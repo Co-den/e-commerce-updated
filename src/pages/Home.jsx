@@ -73,13 +73,9 @@ const Home = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-<<<<<<< HEAD
         const response = await axios.get(
           "https://project-1-b69v.onrender.com/api/products/featured"
         );
-=======
-        const response = await api.get("/api/products/featured");
->>>>>>> bfd326b (new commit)
         console.log("API Response:", response);
         setFeaturedProducts(response.data.products); // Match your response structure
       } catch (error) {
