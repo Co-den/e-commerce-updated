@@ -20,6 +20,9 @@ body {
   /* Remove default padding */
   
 }
+
+#root{
+  text-align:"center"
 }
 
 @layer components {
