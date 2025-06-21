@@ -77,8 +77,9 @@ agrify/
 ├── screenshots/       # App screenshots
 └── README.md
 
+---
 
-🙋‍♂️ Author
+## 🙋‍♂️ Author
 Agugbue Ikenna Nzubechi
 📧 agugbuenzubechi@gmail.com
 🔗 GitHub
