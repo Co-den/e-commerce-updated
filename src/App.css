@@ -16,8 +16,10 @@
 
 body {
   font-family: "Fredoka", "Poppins", sans-serif;
+  text-align:"center"
   /* Remove default padding */
   
+}
 }
 
 @layer components {
