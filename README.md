@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-🌐 **[View Live Demo](https://your-deployment-link.com)**
+🌐 **[View Live Demo](https://agrific.netlify.app/)**
 
 ---
 
@@ -42,7 +42,6 @@
 - JWT Authentication
 - Stripe/Paystack API
 - Nodemailer
-- Cloudinary
 
 ---
 
@@ -64,3 +63,16 @@ npm run dev
 cd ../backend
 npm install
 npm run dev
+
+
+agrify/
+├── frontend/          # React frontend
+│   └── src/
+├── backend/           # Express backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   └── utils/
+├── screenshots/       # App screenshots
+└── README.md
