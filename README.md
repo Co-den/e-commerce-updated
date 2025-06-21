@@ -52,7 +52,7 @@
 
 ```bash
 
-git clone https://github.com/your-username/agrify.git
+git clone https://github.com/Co-den/e-commerce-updated.git
 cd agrify
 
 //FRONTEND
