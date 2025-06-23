@@ -1,17 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const baseURL =
-  import.meta?.env?.VITE_API_URL ||
-  "https://project-1-207l.onrender.com";
 
-<<<<<<< HEAD
-
-=======
-const api = axios.create({
-  baseURL,
-});
->>>>>>> bfd326b (new commit)
 
 // Helper function for token retrieval
 const getToken = () => localStorage.getItem("token");
@@ -67,7 +57,6 @@ export const updateUser = createAsyncThunk(
           message: "Unauthorized: No token found",
         });
 
-<<<<<<< HEAD
       const response = await axios.put(
         `https://project-1-b69v.onrender.com/api/auth/updateUser/${id}`,
         userData,
@@ -78,14 +67,6 @@ export const updateUser = createAsyncThunk(
           },
         }
       );
-=======
-      const response = await api.put(`/api/auth/updateUser/${id}`, userData, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
->>>>>>> bfd326b (new commit)
 
       localStorage.setItem("user", JSON.stringify(response.data.user));
       return response.data.user;

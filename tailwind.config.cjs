@@ -8,6 +8,7 @@ module.exports = {
         lemon: "#F9E600",
         yellow: "#FFB800",
         green: "#44FB07",
+        blue: '#1F51FF',
         fontFamily: {
           inter: ["Inter", "sans-serif"],
         },

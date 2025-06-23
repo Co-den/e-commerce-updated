@@ -8,16 +8,6 @@ import Alert from "../components/Alert";
 import { motion } from "framer-motion";
 
 
-<<<<<<< HEAD
-
-=======
-const baseURL =
-  import.meta?.env?.VITE_API_URL  || "https://project-1-207l.onrender.com";
-
-const api = axios.create({
-  baseURL,
-});
->>>>>>> bfd326b (new commit)
 
 const ProductPage = () => {
   const { id } = useParams();

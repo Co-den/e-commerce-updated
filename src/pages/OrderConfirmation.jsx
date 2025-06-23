@@ -3,16 +3,6 @@ import { useLocation, Link } from "react-router-dom";
 import axios from "axios";
 
 
-<<<<<<< HEAD
-=======
-const baseURL =
-  import.meta?.env?.VITE_API_URL  || "https://project-1-207l.onrender.com";
-
-const api = axios.create({
-  baseURL,
-});
-
->>>>>>> bfd326b (new commit)
 
 const OrderConfirmation = () => {
   const { state } = useLocation();

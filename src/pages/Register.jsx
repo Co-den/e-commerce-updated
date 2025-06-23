@@ -10,7 +10,9 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, error, isAuthenticated } = useSelector((state) => state.auth);
+  const { loading, error, isAuthenticated } = useSelector(
+    (state) => state.auth
+  );
 
   useEffect(() => {
     dispatch(clearError());
@@ -21,7 +23,14 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !email || !password || !confirmPassword || password !== confirmPassword) return;
+    if (
+      !name ||
+      !email ||
+      !password ||
+      !confirmPassword ||
+      password !== confirmPassword
+    )
+      return;
 
     try {
       const result = await dispatch(registerUser({ name, email, password }));
@@ -45,23 +54,63 @@ const Register = () => {
 
         {/* Right Section - Registration Form */}
         <div className="w-full md:w-1/2 bg-gray-700 p-8 rounded-b-lg md:rounded-r-lg md:rounded-bl-none">
-          <h2 className="text-2xl font-inter text-center mb-6 text-green">Register</h2>
+          <h2 className="text-2xl font-inter text-center mb-6 text-green">
+            Register
+          </h2>
 
-          {error && <div className="mb-4 p-2 bg-red-500 text-white rounded">{error}</div>}
+          {error && (
+            <div className="mb-4 p-2 bg-red-500 text-white rounded">
+              {error}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <input type="text" placeholder="Name" className="w-full p-3 border border-gray-400 rounded bg-white text-white" />
-            <input type="email" placeholder="Email" className="w-full p-3 border border-gray-400 rounded bg-white text-white" />
-            <input type="password" placeholder="Password" className="w-full p-3 border border-gray-400 rounded bg-white text-white" />
-            <input type="password" placeholder="Confirm Password" className="w-full p-3 border border-gray-400 rounded bg-white text-white" />
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full p-3 border border-gray-400 rounded bg-white text-black"
+            />
 
-            <button type="submit" className="w-full bg-green text-white hover:bg-green py-3 rounded-lg transition-all font-inter" disabled={loading}>
+            <button
+              type="submit"
+              className="w-full bg-green text-white hover:bg-green py-3 rounded-lg transition-all font-inter"
+              disabled={loading}
+            >
               {loading ? "Registering..." : "Register"}
             </button>
           </form>
 
           <p className="mt-4 text-center font-inter">
-            Already have an account? <Link to="/login" className="text-orange hover:text-yellow-500 font-inter">Login</Link>
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="text-orange hover:text-yellow-500 font-inter"
+            >
+              Login
+            </Link>
           </p>
         </div>
       </div>
