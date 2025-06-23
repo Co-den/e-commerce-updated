@@ -8,6 +8,10 @@ import Alert from "../components/Alert";
 import { motion } from "framer-motion";
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 
 const ProductPage = () => {
   const { id } = useParams();

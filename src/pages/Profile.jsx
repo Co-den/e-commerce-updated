@@ -4,6 +4,10 @@ import { updateUser } from "../redux/authSlice";
 import axios from "axios";
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 
 const Profile = () => {
   const { user, token } = useSelector((state) => state.auth);

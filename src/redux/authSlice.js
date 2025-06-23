@@ -1,8 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> refs/remotes/origin/main
 // Helper function for token retrieval
 const getToken = () => localStorage.getItem("token");
 
@@ -67,6 +70,10 @@ export const updateUser = createAsyncThunk(
           },
         }
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 
       localStorage.setItem("user", JSON.stringify(response.data.user));
       return response.data.user;

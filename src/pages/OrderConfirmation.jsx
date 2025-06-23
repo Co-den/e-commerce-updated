@@ -31,7 +31,7 @@ const OrderConfirmation = () => {
   }, [state]);
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-8 rounded-2xl shadow-xl bg-white text-black font-mono">
+    <div className="max-w-3xl mx-auto mt-10 p-8 rounded-2xl shadow-xl bg-white text-black font-inter">
       <h2 className="text-3xl font-bold mb-6">🎉 Order Confirmation</h2>
 
       {orderDetails ? (

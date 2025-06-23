@@ -8,5 +8,8 @@
 
 
 body {
-  font-family: 'inter', sans-serif;
+  font-family: "Fredoka", "Poppins", sans-serif;
+  text-align:"center"
+  /* Remove default padding */
+  
 }

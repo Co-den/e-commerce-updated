@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 const Product = () => {
   const [products, setProducts] = useState([]);
 

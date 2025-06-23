@@ -141,13 +141,13 @@ const CheckoutForm = ({ cartTotal }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-3xl mx-auto mt-10 p-8 rounded-2xl shadow-xl bg-white from-black via-green-900 to-black text-white font-mono"
+      className="max-w-3xl mx-auto mt-10 p-8 rounded-2xl shadow-xl bg-white from-black via-green-900 to-black text-white font-inter"
     >
-      <h2 className="text-3xl font-bold mb-6 text-black">🧾 Checkout</h2>
+      <h2 className="text-3xl font-inter mb-6 text-black">🧾 Checkout</h2>
 
       {/* Billing Info */}
       <div className="mb-10">
-        <h3 className="text-xl font-semibold mb-4 text-green">Billing Info</h3>
+        <h3 className="text-xl font-inter mb-4 text-green">Billing Info</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <input
             type="text"
@@ -203,7 +203,7 @@ const CheckoutForm = ({ cartTotal }) => {
 
       {/* Payment Info */}
       <div className="mb-10">
-        <h3 className="text-xl font-semibold mb-4 text-green">Payment Info</h3>
+        <h3 className="text-xl font-inter mb-4 text-green">Payment Info</h3>
         <div className="mb-4">
           <label className="block text-sm text-yellow mb-2">Card Number</label>
           <div className="p-3 bg-black/20 border border-green-600 rounded-lg">

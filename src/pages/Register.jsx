@@ -65,7 +65,11 @@ const Register = () => {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
+<<<<<<< HEAD
             <input
+=======
+                 <input
+>>>>>>> refs/remotes/origin/main
               type="text"
               placeholder="Name"
               value={name}
