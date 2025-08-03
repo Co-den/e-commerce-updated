@@ -82,7 +82,7 @@ const Navbar = () => {
           {user ? (
             <>
               <Link to="/profile" className="block text-black hover:bg-yellow">Profile</Link>
-              <Link to="/settings" className="block text-black hover:bg-yellow">⚙️Settings</Link>
+              <Link to="/settings" className="block text-black hover:bg-yellow">Settings</Link>
               <button onClick={handleLogout} className="block text-red-500">Logout</button>
             </>
           ) : (
