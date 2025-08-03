@@ -41,20 +41,20 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/products" className="text-green hover:text-yellow-500 transition-colors">Products</Link>
-            <Link to="/cart" className="text-green hover:text-yellow-500 transition-colors">🛒Cart</Link>
+            <Link to="/cart" className="text-green hover: text-black transition-colors">🛒Cart</Link>
 
             {isAuthenticated && user ? (
               <div className="relative" ref={dropdownRef}>
                 <button onClick={toggleDropdown} className="text-green hover:text-yellow-500 transition flex items-center space-x-2">
-                  <span>👤{user.name}</span>
+                  <span>{user.name}</span>
                   <svg className={`w-4 h-4 ${isDropdownOpen ? "rotate-180" : ""} transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                   </svg>
                 </button>
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white border border-yellow-500 rounded-lg shadow-lg z-50">
-                    <Link to="/profile" className="block px-4 py-2 text-sm text-yellow-400 hover:bg-yellow-900">👤Profile</Link>
-                    <Link to="/settings" className="block px-4 py-2 text-sm text-yellow-400 hover:bg-yellow-900">⚙️Settings</Link>
+                    <Link to="/profile" className="block px-4 py-2 text-sm text-black hover:bg-yellow-900">Profile</Link>
+                    <Link to="/settings" className="block px-4 py-2 text-sm text-black hover:bg-yellow-900">Settings</Link>
                     <button onClick={handleLogout} className="w-full text-left px-4 py-2 text-red-500 hover:bg-yellow-900">Logout</button>
                   </div>
                 )}
@@ -77,12 +77,12 @@ const Navbar = () => {
 
       {isMenuOpen && (
         <div className="md:hidden px-6 py-4 space-y-3 bg-white border-t border-yellow-500">
-          <Link to="/products" className="block text-lemon hover:bg-yellow">🐔Products</Link>
-          <Link to="/cart" className="block text-lemon hover:bg-yellow">🛒Cart</Link>
+          <Link to="/products" className="block text-black hover:bg-yellow">Products</Link>
+          <Link to="/cart" className="block text-black hover:bg-yellow">Cart</Link>
           {user ? (
             <>
-              <Link to="/profile" className="block text-lemon hover:bg-yellow">👤Profile</Link>
-              <Link to="/settings" className="block text-lemon hover:bg-yellow">⚙️Settings</Link>
+              <Link to="/profile" className="block text-black hover:bg-yellow">Profile</Link>
+              <Link to="/settings" className="block text-black hover:bg-yellow">⚙️Settings</Link>
               <button onClick={handleLogout} className="block text-red-500">Logout</button>
             </>
           ) : (
