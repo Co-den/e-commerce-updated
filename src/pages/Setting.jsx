@@ -108,7 +108,7 @@ const Settings = () => {
 
   return (
     <div className={containerStyle}>
-      <h1 className="text-3xl font-bold text-center mb-8">⚙️ Settings</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">Settings</h1>
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
         {/* Left Column: Account Settings */}
