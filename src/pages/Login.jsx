@@ -32,61 +32,61 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-orange text-white p-4">
-      <div className="flex flex-col md:flex-row w-full max-w-4xl bg-gray-800 rounded-lg shadow-lg">
-        {/* Left Section - Welcome Text */}
-        <div className="w-full md:w-1/2 flex justify-center items-center p-8 bg-gray-700 rounded-t-lg md:rounded-l-lg md:rounded-tr-none">
-          <h1 className="text-3xl md:text-5xl font-inter text-green text-center md:text-left">
-            Welcome to Login
-          </h1>
-        </div>
+    <div className="min-h-screen flex justify-center items-center bg-white">
+      <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm">
+        <h2 className="text-2xl font-bold text-center mb-4 text-lemon">Login</h2>
 
-        {/* Right Section - Login Form */}
-        <div className="w-full md:w-1/2 bg-gray-700 p-8 rounded-b-lg md:rounded-r-lg md:rounded-bl-none">
-          <h2 className="text-4xl text-green font-inter text-center mb-6">Login</h2>
+        {error && <div className="mb-4 p-2 bg-red-100 text-red-700 rounded">{error}</div>}
 
-          {error && <div className="mb-4 p-2 bg-red-500 text-white rounded">{error}</div>}
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-lg font-inter text-left">Email</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full p-3 border border-gray-400 rounded bg-white text-black"
-                disabled={loading}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="password" className="block text-lg font-inter text-left">Password</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                className="w-full p-3 border border-gray-400 rounded bg-white text-black"
-                disabled={loading}
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-green text-white hover:bg-green-100 py-3 rounded-lg transition-all font-inter"
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-green">Email</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full p-2 border border-gray-300 rounded mt-1 text-black"
               disabled={loading}
-            >
-              {loading ? "Logging in..." : "Login"}
-            </button>
-          </form>
+            />
+          </div>
 
-          <p className="mt-4 text-center font-inter">
-            Don't have an account? <Link to="/register" className="text-orange hover:text-yellow">Register</Link>
-          </p>
-        </div>
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-green">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="w-full p-2 border border-gray-300 rounded mt-1 text-black"
+              disabled={loading}
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-orange text-white hover:bg-yellow py-2 rounded flex justify-center items-center transition-colors"
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+                Logging in...
+              </>
+            ) : (
+              "Login"
+            )}
+          </button>
+        </form>
+
+        <p className="mt-4 text-center text-green">
+          Don't have an account? <Link to="/register" className="text-yellow hover:text-orange">Register</Link>
+        </p>
       </div>
     </div>
   );
