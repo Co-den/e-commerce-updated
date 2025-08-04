@@ -183,7 +183,7 @@ const Settings = () => {
                Notifications
             </h2>
             <div className="space-y-2">
-              <label className="flex items-center justify-between text-green">
+              <label className="flex items-center justify-between">
                 <span>Email Alerts</span>
                 <input
                   type="checkbox"
@@ -192,7 +192,7 @@ const Settings = () => {
                   className="accent-yellow-500 scale-125"
                 />
               </label>
-              <label className="flex items-center justify-between text-green">
+              <label className="flex items-center justify-between">
                 <span>SMS Alerts</span>
                 <input
                   type="checkbox"
