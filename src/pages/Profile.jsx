@@ -4,10 +4,6 @@ import { updateUser } from "../redux/authSlice";
 import axios from "axios";
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 
 const Profile = () => {
   const { user, token } = useSelector((state) => state.auth);
@@ -85,11 +81,11 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white from-black via-green-950 to-black text-white font-inter p-6">
+    <div className="min-h-screen bg-white from-black via-green-950 to-black text-white font-mono p-6">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Profile Card */}
         <div className="bg-white/10 backdrop-blur-md border border-yellow-500/30 rounded-2xl shadow-xl p-6 hover:shadow-yellow-500/50 transition-all duration-300">
-          <h2 className="text-2xl font-inter text-lemon mb-4">👤 My Profile</h2>
+          <h2 className="text-2xl font-bold text-lemon mb-4">My Profile</h2>
 
           {isEditing ? (
             <form onSubmit={handleUpdate}>
@@ -137,7 +133,7 @@ const Profile = () => {
                 onClick={() => setIsEditing(true)}
                 className="px-4 py-2 bg-orange hover:bg-yellow rounded-md text-black font-semibold"
               >
-                ✏️ Edit Profile
+                Edit Profile
               </button>
             </>
           )}
@@ -145,8 +141,8 @@ const Profile = () => {
 
         {/* Order History */}
         <div className="bg-white/10 backdrop-blur-md border border-orange-500/30 rounded-2xl shadow-xl p-6 hover:shadow-orange-500/40 transition-all duration-300">
-          <h2 className="text-2xl font-inter text-lemon mb-4">
-            📦 Order History
+          <h2 className="text-2xl font-bold text-lemon mb-4">
+            Order History
           </h2>
 
           {loading.orders ? (
