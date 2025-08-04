@@ -115,7 +115,7 @@ const Settings = () => {
         <div className="flex-1 space-y-6">
           <div className={cardStyle}>
             <h2 className="text-xl font-semibold text-green mb-4">
-              👤 Account
+               Account
             </h2>
 
             {error && (
@@ -169,7 +169,7 @@ const Settings = () => {
                 disabled={loading.update}
                 className="bg-orange hover:bg-yellow rounded-md py-2 text-white"
               >
-                {loading.update ? "Saving..." : "💾 Save Changes"}
+                {loading.update ? "Saving..." : "Save Changes"}
               </button>
             </form>
           </div>
@@ -180,7 +180,7 @@ const Settings = () => {
           {/* Notification Settings */}
           <div className={cardStyle}>
             <h2 className="text-xl font-semibold text-green mb-4">
-              🔔 Notifications
+               Notifications
             </h2>
             <div className="space-y-2">
               <label className="flex items-center justify-between text-green">
@@ -206,7 +206,7 @@ const Settings = () => {
 
           {/* Theme Settings */}
           <div className={cardStyle}>
-            <h2 className="text-xl font-semibold text-green mb-4">🎨 Theme</h2>
+            <h2 className="text-xl font-semibold text-green mb-4"> Theme</h2>
             <select
               value={theme}
               onChange={(e) => setTheme(e.target.value)}
@@ -223,7 +223,7 @@ const Settings = () => {
           {/* Danger Zone */}
           <div className={cardStyle + " border-red-500/30"}>
             <h2 className="text-xl font-semibold text-red-600 mb-4">
-              🚮 Delete Account
+               Delete Account
             </h2>
             <button
               onClick={handleDeleteAccount}
