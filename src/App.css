@@ -1,50 +1,19 @@
 /* Replace @tailwind directives with: */
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-@font-face {
-  font-family: "inter";
-  src: url("/fonts/Coralcandyregulardemo-z8Lj3.ttf")
-      format("opentype"),
-    url("/fonts/Coralcandyregulardemo-z8Lj3.ttf")
-      format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
-  font-family: "Fredoka", "Poppins", sans-serif;
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  overflow-x: hidden;
-  /* Remove default padding */
-  
-}
-
-#root{
-  text-align:"center";
-   margin: 0 auto;
-  padding: 2rem;
-  
-}
 
 @layer components {
   .btn {
     @apply bg-blue-500 text-white px-4 py-2 rounded-md 
            hover:bg-blue-600 transition-colors duration-200;
   }
-
+  
   .card {
     @apply border border-gray-200 rounded-lg shadow-md p-4 bg-white;
   }
-
+  
   .container {
     @apply max-w-6xl mx-auto px-4;
   }
 }
-
-
