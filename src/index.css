@@ -1,36 +1,19 @@
-/* 1. Correct Font Face Path and Syntax */
-/* 2. Tailwind CSS Directives */
+/* Replace @tailwind directives with: */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@font-face {
-  font-family: "inter";
-  src: url("/fonts/Wosker\ Demo.otf") format("opentype"),
-    url("/fonts/Wosker\ Demo.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-/* 3. Global Body Font */
-body {
-  font-family: "Fredoka", "Poppins", sans-serif;
-  text-align:"center"
-  /* Remove default padding */
-  
-}
-
-/* 4. Tailwind Custom Components */
 @layer components {
   .btn {
     @apply bg-blue-500 text-white px-4 py-2 rounded-md 
            hover:bg-blue-600 transition-colors duration-200;
   }
-
+  
   .card {
     @apply border border-gray-200 rounded-lg shadow-md p-4 bg-white;
   }
-
+  
   .container {
-    @apply max-w-6xl mx-auto px-4 font-inter;
+    @apply max-w-6xl mx-auto px-4;
   }
 }
