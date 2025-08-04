@@ -3,10 +3,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 
 const CategoryProducts = () => {
   const { categoryName } = useParams();
