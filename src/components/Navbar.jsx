@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav className="bg-white/80 backdrop-blur-lg border-b border-yellow-500 shadow-md sticky top-0 z-50 font-inter">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-inter text-green-900 tracking-wider glow-text">
+          <Link to="/" className="text-2xl font-inter text-green-950 tracking-wider glow-text">
             🐔Agrify
           </Link>
 
