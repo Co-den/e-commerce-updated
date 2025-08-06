@@ -113,7 +113,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative pt-16 pb-32 bg-green-900 overflow-hidden"
+        className="relative pt-16 pb-32 bg-gradient-to-b from-green-900 to-green-800 overflow-hidden"
       >
     
         {/* Centered Content */}
