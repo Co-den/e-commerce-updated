@@ -31,7 +31,7 @@ const Navbar = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (!searchTerm.trim()) return;
-    navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+    navigate(`/products?search=${encodeURIComponent(searchTerm)}`);
     setSearchTerm("");
     setIsSearchOpen(false);
     setIsMenuOpen(false);

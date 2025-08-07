@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -6,6 +7,8 @@ import { motion } from "framer-motion";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("search") || "";
 
   useEffect(() => {
     axios
@@ -17,6 +20,7 @@ const Product = () => {
   return (
     <div className="container mx-auto p-4 bg-white min-h-screen">
       <h2 className="text-3xl font-bold text-green mb-6">Products</h2>
+      {query && <p>Showing results for "{query}"</p>}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product, index) => (
           <motion.div
