@@ -3,11 +3,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
 @layer components {
   .btn {
     @apply bg-blue-500 text-white px-4 py-2 rounded-md 

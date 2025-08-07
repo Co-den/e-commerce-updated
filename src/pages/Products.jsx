@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
 const Product = () => {
   const [products, setProducts] = useState([]);
 

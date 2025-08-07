@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // search state
+  // new search state
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -60,21 +60,16 @@ const Navbar = () => {
     <nav className="bg-white/80 backdrop-blur-lg border-b border-yellow-500 shadow-md sticky top-0 z-50 font-inter">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
-<<<<<<< HEAD
           {/* Logo */}
           <Link
             to="/"
             className="text-2xl font-inter text-darkGreen tracking-wider glow-text"
           >
-=======
-          <Link to="/" className="text-2xl font-inter text-darkGreen tracking-wider glow-text">
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
             🐔Agrify
           </Link>
 
           {/* Desktop: Search + Links */}
           <div className="hidden md:flex items-center space-x-6">
-<<<<<<< HEAD
             {/* Search form */}
             <form onSubmit={handleSearchSubmit} className="relative">
               <input
@@ -102,7 +97,7 @@ const Navbar = () => {
               to="/cart"
               className="text-green hover:text-yellow-500 transition-colors"
             >
-              🛒
+              🛒Cart
             </Link>
 
             {isAuthenticated && user ? (
@@ -126,23 +121,11 @@ const Navbar = () => {
                       strokeWidth={2}
                       d="M19 9l-7 7-7-7"
                     />
-=======
-            <Link to="/products" className="text-green hover:text-yellow-500 transition-colors">Products</Link>
-            <Link to="/cart" className="text-green hover: text-black transition-colors">🛒Cart</Link>
-
-            {isAuthenticated && user ? (
-              <div className="relative" ref={dropdownRef}>
-                <button onClick={toggleDropdown} className="text-green hover:text-yellow-500 transition flex items-center space-x-2">
-                  <span>{user.name}</span>
-                  <svg className={`w-4 h-4 ${isDropdownOpen ? "rotate-180" : ""} transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
                   </svg>
                 </button>
 
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white border border-yellow-500 rounded-lg shadow-lg z-50">
-<<<<<<< HEAD
                     <Link
                       to="/profile"
                       className="block px-4 py-2 text-sm text-black hover:bg-yellow-900"
@@ -161,11 +144,6 @@ const Navbar = () => {
                     >
                       Logout
                     </button>
-=======
-                    <Link to="/profile" className="block px-4 py-2 text-sm text-black hover:bg-yellow-900">Profile</Link>
-                    <Link to="/settings" className="block px-4 py-2 text-sm text-black hover:bg-yellow-900">Settings</Link>
-                    <button onClick={handleLogout} className="w-full text-left px-4 py-2 text-red-500 hover:bg-yellow-900">Logout</button>
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
                   </div>
                 )}
               </div>
@@ -210,7 +188,6 @@ const Navbar = () => {
       {/* Mobile Menu Panel */}
       {isMenuOpen && (
         <div className="md:hidden px-6 py-4 space-y-3 bg-white border-t border-yellow-500">
-<<<<<<< HEAD
           <Link to="/products" className="block text-black hover:bg-yellow">
             Products
           </Link>
@@ -228,15 +205,6 @@ const Navbar = () => {
               <button onClick={handleLogout} className="block text-red-500">
                 Logout
               </button>
-=======
-          <Link to="/products" className="block text-black hover:bg-yellow">Products</Link>
-          <Link to="/cart" className="block text-black hover:bg-yellow">Cart</Link>
-          {user ? (
-            <>
-              <Link to="/profile" className="block text-black hover:bg-yellow">Profile</Link>
-              <Link to="/settings" className="block text-black hover:bg-yellow">Settings</Link>
-              <button onClick={handleLogout} className="block text-red-500">Logout</button>
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
             </>
           ) : (
             <Link to="/login" className="block text-yellow bg-green">
