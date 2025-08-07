@@ -97,7 +97,7 @@ const Navbar = () => {
               to="/cart"
               className="text-green hover:text-yellow-500 transition-colors"
             >
-              🛒Cart
+              🛒
             </Link>
 
             {isAuthenticated && user ? (
