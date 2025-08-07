@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {FaSearch} from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/authSlice";
 
@@ -97,7 +98,8 @@ const Navbar = () => {
               to="/cart"
               className="text-green hover:text-yellow-500 transition-colors"
             >
-              🛒
+              
+              <FaShoppingCart size={20} />
             </Link>
 
             {isAuthenticated && user ? (

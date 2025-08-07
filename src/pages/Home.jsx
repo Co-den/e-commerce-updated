@@ -131,9 +131,9 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="mt-3 text-base font-bold text-white sm:text-lg md:mt-5 md:text-xl"
             >
-              Looking for healthy live chickens, adorable day-old chicks, or
-              farm-fresh eggs? You've found the perfect place. We supply
-              high-quality poultry to farmers, homes, and agribusinesses with
+              Looking for healthy live chickens, adorable day old chicks, or
+              farm fresh eggs? You've found the perfect place. We supply
+              high quality poultry to farmers, homes, and agribusinesses with
               care, speed, and reliability.
             </motion.p>
 
