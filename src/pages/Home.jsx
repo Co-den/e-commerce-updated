@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import Alert from "../components/Alert";
 import axios from "axios";
-
 
 // Animation variants
 const containerVariants = {
@@ -47,10 +46,12 @@ const hoverScale = {
 const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddToCart = async (product) => {
     if (!product) return;
@@ -59,7 +60,6 @@ const Home = () => {
     try {
       const normalizedProduct = { ...product, _id: product.id };
       dispatch(addToCart({ product: normalizedProduct, quantity }));
-      //dispatch(addToCart({ product, quantity: 1 })); // Default quantity to 1
       setSelectedProduct(product);
       setShowAlert(true);
       setTimeout(() => setShowAlert(false), 3000);
@@ -76,8 +76,7 @@ const Home = () => {
         const response = await axios.get(
           "https://project-1-b69v.onrender.com/api/products/featured"
         );
-        console.log("API Response:", response);
-        setFeaturedProducts(response.data.products); // Match your response structure
+        setFeaturedProducts(response.data.products);
       } catch (error) {
         console.error("API Error:", {
           message: error.message,
@@ -89,7 +88,7 @@ const Home = () => {
 
     fetchFeaturedProducts();
   }, []);
-  // Poultry-related categories
+
   const categories = [
     { name: "Chickens", slug: "chickens" },
     { name: "Eggs", slug: "eggs" },
@@ -115,8 +114,6 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         className="relative pt-16 pb-32 bg-darkGreen overflow-hidden"
       >
-    
-        {/* Centered Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[60vh] flex items-center justify-center text-center relative z-10">
           <div className="w-full md:w-2/3 relative z-20">
             <motion.h1
@@ -146,12 +143,42 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               className="mt-5 flex justify-center md:mt-8"
             >
-              <Link
-                to="/products"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors"
+              <button
+                onClick={() => {
+                  setIsNavigating(true);
+                  setTimeout(() => navigate("/products"), 800);
+                }}
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors disabled:opacity-50"
+                disabled={isNavigating}
               >
-                Start Shopping
-              </Link>
+                {isNavigating ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                      ></path>
+                    </svg>
+                    Loading...
+                  </>
+                ) : (
+                  "Start Shopping"
+                )}
+              </button>
             </motion.div>
           </div>
         </div>
@@ -215,38 +242,37 @@ const Home = () => {
           </motion.h2>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredProducts &&
-              featuredProducts.map((product) => (
-                <motion.div
-                  key={product._id}
-                  variants={itemVariants}
-                  whileHover="hover"
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
-                >
-                  <motion.div variants={hoverScale}>
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-orange text-xl font-semibold">
-                        {product.name}
-                      </h3>
-                      <p className="mt-2 text-orange-600 font-bold">
-                        ${product.price}
-                      </p>
-                      <button
-                        onClick={() => handleAddToCart(product)}
-                        disabled={isAddingToCart}
-                        className="mt-4 w-full bg-orange text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
-                      >
-                        {isAddingToCart ? "Adding..." : "Add to Cart"}
-                      </button>
-                    </div>
-                  </motion.div>
+            {featuredProducts.map((product) => (
+              <motion.div
+                key={product._id}
+                variants={itemVariants}
+                whileHover="hover"
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+              >
+                <motion.div variants={hoverScale}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-orange text-xl font-semibold">
+                      {product.name}
+                    </h3>
+                    <p className="mt-2 text-orange-600 font-bold">
+                      ${product.price}
+                    </p>
+                    <button
+                      onClick={() => handleAddToCart(product)}
+                      disabled={isAddingToCart}
+                      className="mt-4 w-full bg-orange text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
+                    >
+                      {isAddingToCart ? "Adding..." : "Add to Cart"}
+                    </button>
+                  </div>
                 </motion.div>
-              ))}
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.div>
