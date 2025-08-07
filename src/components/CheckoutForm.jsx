@@ -143,7 +143,7 @@ const CheckoutForm = ({ cartTotal }) => {
       onSubmit={handleSubmit}
       className="max-w-3xl mx-auto mt-10 p-8 rounded-2xl shadow-xl bg-white from-black via-green-900 to-black text-white font-inter"
     >
-      <h2 className="text-3xl font-inter mb-6 text-black">🧾 Checkout</h2>
+      <h2 className="text-3xl font-inter mb-6 text-black"> Checkout</h2>
 
       {/* Billing Info */}
       <div className="mb-10">

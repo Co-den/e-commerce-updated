@@ -113,8 +113,9 @@ const Home = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative pt-16 pb-32 bg-gray-700 from-yellow-400 to-orange-500 overflow-hidden"
+        className="relative pt-16 pb-32 bg-darkGreen overflow-hidden"
       >
+    
         {/* Centered Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[60vh] flex items-center justify-center text-center relative z-10">
           <div className="w-full md:w-2/3 relative z-20">
@@ -122,7 +123,7 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-4xl font-inter text-blue sm:text-5xl md:text-6xl pt-7"
+              className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl"
             >
               🐔 Welcome to Agrify Your Trusted Source for Poultry!
             </motion.h1>
@@ -131,12 +132,12 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="mt-3 text-base font-inter text-white sm:text-lg md:mt-5 md:text-xl"
+              className="mt-3 text-base font-bold text-white sm:text-lg md:mt-5 md:text-xl"
             >
               Looking for healthy live chickens, adorable day-old chicks, or
-              farm-fresh eggs, and equipments? You've found the perfect place.
-              We supply high-quality poultry to farmers, homes, and
-              agribusinesses with care, speed, and reliability.
+              farm-fresh eggs? You've found the perfect place. We supply
+              high-quality poultry to farmers, homes, and agribusinesses with
+              care, speed, and reliability.
             </motion.p>
 
             <motion.div
@@ -147,7 +148,7 @@ const Home = () => {
             >
               <Link
                 to="/products"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors"
               >
                 Start Shopping
               </Link>
@@ -166,7 +167,7 @@ const Home = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-2xl font-inter text-blue mb-8"
+          className="text-2xl font-bold text-yellow mb-8"
         >
           Shop by Category
         </motion.h2>
@@ -181,10 +182,10 @@ const Home = () => {
             >
               <Link
                 to={`/category/${category.slug}`}
-                className="bg-blue rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
+                className="bg-orange rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
               >
                 <div className="p-6">
-                  <h3 className="text-lg font-inter text-white">
+                  <h3 className="text-lg font-medium text-white">
                     {category.name}
                   </h3>
                   <p className="mt-2 text-sm text-white">
@@ -208,7 +209,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-inter text-blue mb-8"
+            className="text-2xl font-bold text-yellow mb-8"
           >
             Featured Products
           </motion.h2>
@@ -229,16 +230,16 @@ const Home = () => {
                       className="w-full h-48 object-cover"
                     />
                     <div className="p-4">
-                      <h3 className="text-blue text-sm font-semibold">
+                      <h3 className="text-orange text-xl font-semibold">
                         {product.name}
                       </h3>
-                      <p className="mt-2 text-green font-inter">
+                      <p className="mt-2 text-orange-600 font-bold">
                         ${product.price}
                       </p>
                       <button
                         onClick={() => handleAddToCart(product)}
                         disabled={isAddingToCart}
-                        className="mt-4 w-full bg-blue text-white py-2 rounded-md hover:bg-blue-200 transition-colors disabled:opacity-50"
+                        className="mt-4 w-full bg-orange text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
                       >
                         {isAddingToCart ? "Adding..." : "Add to Cart"}
                       </button>
@@ -260,14 +261,14 @@ const Home = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
-            className="text-2xl font-inter text-blue mb-4"
+            className="text-2xl font-bold text-yellow mb-4"
             whileHover={{ scale: 1.02 }}
           >
             Join Our Poultry Newsletter
           </motion.h2>
 
           <motion.p
-            className="text-green mb-6 font-inter"
+            className="text-orange-600 mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -287,7 +288,7 @@ const Home = () => {
               className="flex-1 border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             <motion.button
-              className="bg-blue text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors font-inter"
+              className="bg-orange text-white px-6 py-2 rounded-md hover:bg-orange-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -308,7 +309,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg text-green font-inter mb-4">🐔Agrify</h3>
+              <h3 className="text-lg text-green font-bold mb-4">🐔Agrify</h3>
               <p className="text-orange-200">Your trusted poultry partner</p>
             </div>
             <div>
@@ -373,7 +374,7 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <p>&copy;2024 Agrify. All rights reserved.</p>
+            <p>&copy; 2024 Agrify. All rights reserved.</p>
           </motion.div>
         </div>
       </motion.footer>
