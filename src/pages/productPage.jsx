@@ -8,6 +8,11 @@ import Alert from "../components/Alert";
 import { motion } from "framer-motion";
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
 const ProductPage = () => {
   const { id } = useParams();
   const [isAddingToCart, setIsAddingToCart] = useState(false);

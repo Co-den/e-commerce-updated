@@ -108,7 +108,11 @@ const Settings = () => {
 
   return (
     <div className={containerStyle}>
+<<<<<<< HEAD
       <h1 className="text-3xl font-bold text-center mb-8"> Settings</h1>
+=======
+      <h1 className="text-3xl font-bold text-center mb-8">Settings</h1>
+>>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
         {/* Left Column: Account Settings */}
@@ -169,7 +173,11 @@ const Settings = () => {
                 disabled={loading.update}
                 className="bg-orange hover:bg-yellow rounded-md py-2 text-white"
               >
+<<<<<<< HEAD
                 {loading.update ? "Saving..." : " Save Changes"}
+=======
+                {loading.update ? "Saving..." : "Save Changes"}
+>>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
               </button>
             </form>
           </div>
@@ -183,7 +191,7 @@ const Settings = () => {
                Notifications
             </h2>
             <div className="space-y-2">
-              <label className="flex items-center justify-between text-green">
+              <label className="flex items-center justify-between">
                 <span>Email Alerts</span>
                 <input
                   type="checkbox"
@@ -192,7 +200,7 @@ const Settings = () => {
                   className="accent-yellow-500 scale-125"
                 />
               </label>
-              <label className="flex items-center justify-between text-green">
+              <label className="flex items-center justify-between">
                 <span>SMS Alerts</span>
                 <input
                   type="checkbox"

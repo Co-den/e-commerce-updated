@@ -2,6 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
 // Helper function for token retrieval
 const getToken = () => localStorage.getItem("token");
 
