@@ -13,7 +13,7 @@ const AIAssistant = ({ product, initialQuestion = "", onClose }) => {
     setLoading(true);
     setAnswer("");
     try {
-      const res = await axios.post("/api/ai/ask", {
+      const res = await axios.post("https://project-1-b69v.onrender.com/api/ai/ask", {
         question: q,
         productData: product,
       });
