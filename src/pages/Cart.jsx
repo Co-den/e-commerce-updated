@@ -120,7 +120,7 @@ const Cart = () => {
 
             <Link
               to="/checkout"
-              className="inline-block w-full bg-orange text-white py-3 rounded-lg mt-6 hover:bg-yellow transition-colors"
+              className="inline-block w-full bg-orange text-white text-center font-bold py-3 rounded-lg mt-6 hover:bg-yellow transition-colors"
             >
               Proceed to Checkout
             </Link>

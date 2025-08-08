@@ -148,7 +148,7 @@ const Home = () => {
                   setIsNavigating(true);
                   setTimeout(() => navigate("/products"), 800);
                 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors disabled:opacity-50"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors disabled:opacity-50"
                 disabled={isNavigating}
               >
                 {isNavigating ? (
@@ -194,7 +194,7 @@ const Home = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-2xl font-bold text-yellow mb-8"
+          className="text-2xl font-bold text-red-700 mb-8"
         >
           Shop by Category
         </motion.h2>
@@ -209,13 +209,13 @@ const Home = () => {
             >
               <Link
                 to={`/category/${category.slug}`}
-                className="bg-orange rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
+                className="bg-green rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
               >
                 <div className="p-6">
-                  <h3 className="text-lg font-medium text-white">
+                  <h3 className="text-lg font-bold text-white">
                     {category.name}
                   </h3>
-                  <p className="mt-2 text-sm text-white">
+                  <p className="mt-2 text-sm text-white font-bold">
                     Explore our {category.name.toLowerCase()} collection
                   </p>
                 </div>
@@ -236,7 +236,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-bold text-yellow mb-8"
+            className="text-2xl font-bold text-red-700 mb-8"
           >
             Featured Products
           </motion.h2>
@@ -287,7 +287,7 @@ const Home = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
-            className="text-2xl font-bold text-yellow mb-4"
+            className="text-2xl font-bold text-darkGreen mb-4"
             whileHover={{ scale: 1.02 }}
           >
             Join Our Poultry Newsletter
@@ -314,7 +314,7 @@ const Home = () => {
               className="flex-1 border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             <motion.button
-              className="bg-orange text-white px-6 py-2 rounded-md hover:bg-orange-700 transition-colors"
+              className="bg-darkGreen text-white px-6 py-2 rounded-md hover:bg-orange-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

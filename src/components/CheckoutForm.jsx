@@ -206,7 +206,7 @@ const CheckoutForm = ({ cartTotal }) => {
         <h3 className="text-xl font-semibold mb-4 text-green">Payment Info</h3>
         <div className="mb-4">
           <label className="block text-sm text-yellow mb-2">Card Number</label>
-          <div className="p-3 bg-black/20 border border-green-600 rounded-lg">
+          <div className="p-6 bg-black/20 border border-green-600 rounded-lg">
             <CardNumberElement options={cardElementOptions} />
           </div>
         </div>
@@ -216,14 +216,14 @@ const CheckoutForm = ({ cartTotal }) => {
             <label className="block text-sm text-yellow mb-2">
               Expiry Date
             </label>
-            <div className="p-3 bg-black/20 border border-green-600 rounded-lg">
+            <div className="p-6 bg-black/20 border border-green-600 rounded-lg">
               <CardExpiryElement options={cardElementOptions} />
             </div>
           </div>
 
           <div>
             <label className="block text-sm text-yellow mb-2">CVC</label>
-            <div className="p-3 bg-black/20 border border-green-600 rounded-lg">
+            <div className="p-6 bg-black/20 border border-green-600 rounded-lg">
               <CardCvcElement options={cardElementOptions} />
             </div>
           </div>
