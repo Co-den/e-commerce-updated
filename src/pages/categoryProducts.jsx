@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { getProductSuggestion } from "../utils/gemini"; 
-import { FaRobot } from "react-icons/fa";
 import FloatingAIButton from "../components/FloatingAIbutton";
 
 const CategoryProducts = () => {
@@ -10,7 +9,7 @@ const CategoryProducts = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [aiSuggestions, setAiSuggestions] = useState({});
-  const [showChat, setShowChat] = useState(false);
+ 
 
   useEffect(() => {
     setIsLoading(true);
@@ -71,14 +70,6 @@ const CategoryProducts = () => {
 
       {/* Floating AI Chat Icon */}
       <FloatingAIButton product={products.length > 0 ? products[0] : null} />
-
-      {/* Floating Chat Window */}
-      {showChat && (
-        <div className="fixed bottom-20 right-6 w-80 bg-white border border-gray-300 shadow-lg rounded-lg p-4">
-          <h3 className="text-lg font-bold mb-2">AI Assistant</h3>
-          <p className="text-sm text-gray-700">Ask me about any product!</p>
-        </div>
-      )}
     </div>
   );
 };
