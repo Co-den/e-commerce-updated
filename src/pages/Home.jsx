@@ -250,9 +250,9 @@ const Home = () => {
           <div className="sm:w-1/2 p-6 flex flex-col justify-between bg-yellow-50">
             <div>
               <h3 className="text-2xl font-bold text-darkGreen mb-3">
-                🌱 Book Us for Farming Advice
+                Book Us for Farming Advice
               </h3>
-              <p className="text-orange-700 font-medium mb-4">
+              <p className="text-green font-medium mb-4">
                 Get expert tips on crop cultivation, livestock management, and
                 sustainable farming practices from our seasoned agricultural
                 professionals.
