@@ -132,9 +132,9 @@ const Home = () => {
               className="mt-3 text-base font-bold text-white sm:text-lg md:mt-5 md:text-xl"
             >
               Looking for healthy live chickens, adorable day old chicks, or
-              farm fresh eggs? You've found the perfect place. We supply
-              high quality poultry to farmers, homes, and agribusinesses with
-              care, speed, and reliability.
+              farm fresh eggs? You've found the perfect place. We supply high
+              quality poultry to farmers, homes, and agribusinesses with care,
+              speed, and reliability.
             </motion.p>
 
             <motion.div
@@ -223,6 +223,51 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
+      </motion.div>
+      {/* Farming Advice Booking Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+          className="bg-white rounded-lg shadow-lg flex flex-col sm:flex-row overflow-hidden border-l-4 border-orange"
+        >
+          {/* Left Side - Image */}
+          <div className="sm:w-1/2">
+            <img
+              src="./images/corn.jpg"
+              alt="Farming Advice"
+              className="h-64 sm:h-full w-full object-cover"
+            />
+          </div>
+
+          {/* Right Side - Details */}
+          <div className="sm:w-1/2 p-6 flex flex-col justify-between bg-yellow-50">
+            <div>
+              <h3 className="text-2xl font-bold text-darkGreen mb-3">
+                🌱 Book Us for Farming Advice
+              </h3>
+              <p className="text-orange-700 font-medium mb-4">
+                Get expert tips on crop cultivation, livestock management, and
+                sustainable farming practices from our seasoned agricultural
+                professionals.
+              </p>
+            </div>
+            <div>
+              <button
+                onClick={() => navigate("/booking")}
+                className="mt-4 w-full bg-orange text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
 
       {/* Featured Products */}

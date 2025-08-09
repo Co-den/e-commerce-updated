@@ -20,7 +20,7 @@ const ProductCard = ({ product, onOpenChat }) => {
   const fetchAISuggestions = async () => {
     setLoadingSuggestions(true);
     try {
-      const res = await axios.post("/api/ai/suggestions", { product });
+      const res = await axios.post("https://project-1-b69v.onrender.com/api/ai/suggestions", { product });
       if (res.data?.suggestions?.length) setSuggestions(res.data.suggestions);
     } catch (err) {
       console.error("AI suggestions error:", err);

@@ -15,6 +15,7 @@ import Admin from "./pages/Admin";
 import Product from "./pages/Products";
 import ProductPage from "./pages/productPage";
 import CategoryProducts from "./pages/categoryProducts";
+import Booking from "./pages/Booking";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import Checkout from "./pages/Checkout";
@@ -48,6 +49,7 @@ const MainLayout = () => {
             path="/category/:categoryName"
             element={<CategoryProducts />}
           />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/checkout" element={<Checkout />} />
