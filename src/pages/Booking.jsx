@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Booking = () => {
   const navigate = useNavigate();
+  const [booking, setBooking] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,6 +23,12 @@ const Booking = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Send booking data to backend API
+    useEffect(()=>{
+        axios.post()
+        .then((res)=>{
+          setBooking(res.data); 
+        })
+    })
     console.log("Booking Data:", formData);
     alert("Your booking request has been submitted!");
     navigate("/");
@@ -35,7 +43,7 @@ const Booking = () => {
         className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8 border-t-4 border-orange"
       >
         <h2 className="text-3xl font-bold text-darkGreen mb-6 text-center">
-          🌱 Farming Advice Booking
+          Farming Advice Booking
         </h2>
         <p className="text-orange-700 mb-8 text-center font-medium">
           Fill in the form below and our agricultural experts will reach out to you.
@@ -107,7 +115,7 @@ const Booking = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="w-full bg-orange text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
+            className="w-full bg-green text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
           >
             Submit Booking
           </motion.button>

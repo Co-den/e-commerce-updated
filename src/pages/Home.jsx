@@ -148,7 +148,7 @@ const Home = () => {
                   setIsNavigating(true);
                   setTimeout(() => navigate("/products"), 800);
                 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors disabled:opacity-50"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-green hover:bg-red-600 transition-colors disabled:opacity-50"
                 disabled={isNavigating}
               >
                 {isNavigating ? (
@@ -209,7 +209,7 @@ const Home = () => {
             >
               <Link
                 to={`/category/${category.slug}`}
-                className="bg-green rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
+                className="bg-darkGreen rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
               >
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white">
@@ -261,7 +261,7 @@ const Home = () => {
             <div>
               <button
                 onClick={() => navigate("/booking")}
-                className="mt-4 w-full bg-orange text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
+                className="mt-4 w-full bg-green text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
               >
                 Book Now
               </button>
@@ -310,7 +310,7 @@ const Home = () => {
                     <button
                       onClick={() => handleAddToCart(product)}
                       disabled={isAddingToCart}
-                      className="mt-4 w-full bg-orange text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
+                      className="mt-4 w-full bg-green text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
                     >
                       {isAddingToCart ? "Adding..." : "Add to Cart"}
                     </button>
