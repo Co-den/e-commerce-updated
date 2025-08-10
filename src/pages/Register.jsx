@@ -46,7 +46,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="min-h-screen flex justify-center items-center bg-white">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm">
-        <h2 className="text-2xl font-bold text-center mb-4 text-lemon">
+        <h2 className="text-2xl font-bold text-center mb-4 text-black">
           Register
         </h2>
 
@@ -60,7 +60,7 @@ const handleSubmit = async (e) => {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-green"
+              className="block text-sm font-medium text-black"
             >
               Name
             </label>
@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-green"
+              className="block text-sm font-medium text-black"
             >
               Email
             </label>
@@ -95,7 +95,7 @@ const handleSubmit = async (e) => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-green"
+              className="block text-sm font-medium text-black"
             >
               Password
             </label>
@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
           <div>
             <label
               htmlFor="confirmPassword"
-              className="block text-sm font-medium text-green"
+              className="block text-sm font-medium text-black"
             >
               Confirm Password
             </label>
@@ -130,7 +130,7 @@ const handleSubmit = async (e) => {
 
           <button
             type="submit"
-            className="w-full bg-orange text-white hover:bg-yellow py-2 rounded flex justify-center items-center transition-colors"
+            className="w-full bg-darkGreen text-white hover:bg-green py-2 rounded flex justify-center items-center transition-colors"
             disabled={loading}
           >
             {loading ? (
@@ -159,9 +159,9 @@ const handleSubmit = async (e) => {
           </button>
         </form>
 
-        <p className="mt-4 text-center text-green">
+        <p className="mt-4 text-center text-black">
           Already have an account?{" "}
-          <Link to="/login" className="text-yellow hover:text-orange">
+          <Link to="/login" className="text-red-500 hover:text-red-700">
             Login
           </Link>
         </p>
