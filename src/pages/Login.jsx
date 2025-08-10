@@ -34,13 +34,13 @@ const Login = () => {
   return (
     <div className="min-h-screen flex justify-center items-center bg-white">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm">
-        <h2 className="text-2xl font-bold text-center mb-4 text-lemon">Login</h2>
+        <h2 className="text-2xl font-bold text-center mb-4 text-black">Login</h2>
 
         {error && <div className="mb-4 p-2 bg-red-100 text-red-700 rounded">{error}</div>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-green">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-black">Email</label>
             <input
               type="email"
               id="email"
@@ -53,7 +53,7 @@ const Login = () => {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-green">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium text-black">Password</label>
             <input
               type="password"
               id="password"
@@ -67,7 +67,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full bg-orange text-white hover:bg-yellow py-2 rounded flex justify-center items-center transition-colors"
+            className="w-full bg-darkGreen text-white hover:bg-yellow py-2 rounded flex justify-center items-center transition-colors"
             disabled={loading}
           >
             {loading ? (
@@ -84,8 +84,8 @@ const Login = () => {
           </button>
         </form>
 
-        <p className="mt-4 text-center text-green">
-          Don't have an account? <Link to="/register" className="text-yellow hover:text-orange">Register</Link>
+        <p className="mt-4 text-center text-black">
+          Don't have an account? <Link to="/register" className="text-red-500 hover:text-red-700">Register</Link>
         </p>
       </div>
     </div>
