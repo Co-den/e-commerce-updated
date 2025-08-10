@@ -84,7 +84,7 @@ const Profile = () => {
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Profile Card */}
         <div className="bg-white/10 backdrop-blur-md border border-yellow-500/30 rounded-2xl shadow-xl p-6 hover:shadow-yellow-500/50 transition-all duration-300">
-          <h2 className="text-2xl font-inter text-lemon mb-4">👤 My Profile</h2>
+          <h2 className="text-2xl font-inter text-black mb-4">My Profile</h2>
 
           {isEditing ? (
             <form onSubmit={handleUpdate}>
@@ -115,9 +115,9 @@ const Profile = () => {
               <button
                 type="submit"
                 disabled={loading.update}
-                className="bg-orange hover:bg-yellow rounded-md px-4 py-2 text-white"
+                className="bg-red-700 hover:bg-red-500 rounded-md px-4 py-2 text-white"
               >
-                {loading.update ? "Saving..." : "💾 Save Changes"}
+                {loading.update ? "Saving..." : "Save Changes"}
                 </button>
             </form>
           ) : (
@@ -130,9 +130,9 @@ const Profile = () => {
               </p>
               <button
                 onClick={() => setIsEditing(true)}
-                className="px-4 py-2 bg-orange hover:bg-yellow rounded-md text-black font-semibold"
+                className="px-4 py-2 bg-red-700 hover:bg-red-500 rounded-md text-black font-semibold"
               >
-                ✏️ Edit Profile
+                Edit Profile
               </button>
             </>
           )}
@@ -140,8 +140,8 @@ const Profile = () => {
 
         {/* Order History */}
         <div className="bg-white/10 backdrop-blur-md border border-orange-500/30 rounded-2xl shadow-xl p-6 hover:shadow-orange-500/40 transition-all duration-300">
-          <h2 className="text-2xl font-inter text-lemon mb-4">
-            📦 Order History
+          <h2 className="text-2xl font-inter text-black mb-4">
+            Order History
           </h2>
 
           {loading.orders ? (

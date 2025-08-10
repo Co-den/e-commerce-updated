@@ -114,7 +114,7 @@ const Settings = () => {
         {/* Left Column: Account Settings */}
         <div className="flex-1 space-y-6">
           <div className={cardStyle}>
-            <h2 className="text-xl font-semibold text-green mb-4">
+            <h2 className="text-xl font-semibold text-black mb-4">
                Account
             </h2>
 
@@ -167,7 +167,7 @@ const Settings = () => {
               <button
                 type="submit"
                 disabled={loading.update}
-                className="bg-orange hover:bg-yellow rounded-md py-2 text-white"
+                className="bg-red-700 hover:bg-red-500 rounded-md py-2 text-white"
               >
                 {loading.update ? "Saving..." : " Save Changes"}
               </button>
@@ -179,7 +179,7 @@ const Settings = () => {
         <div className="flex-1 space-y-6">
           {/* Notification Settings */}
           <div className={cardStyle}>
-            <h2 className="text-xl font-semibold text-green mb-4">
+            <h2 className="text-xl font-semibold text-black mb-4">
                Notifications
             </h2>
             <div className="space-y-2">
@@ -206,7 +206,7 @@ const Settings = () => {
 
           {/* Theme Settings */}
           <div className={cardStyle}>
-            <h2 className="text-xl font-semibold text-green mb-4"> Theme</h2>
+            <h2 className="text-xl font-semibold text-black mb-4"> Theme</h2>
             <select
               value={theme}
               onChange={(e) => setTheme(e.target.value)}
