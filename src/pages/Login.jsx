@@ -67,7 +67,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full bg-darkGreen text-white hover:bg-yellow py-2 rounded flex justify-center items-center transition-colors"
+            className="w-full bg-darkGreen text-white hover:bg-green py-2 rounded flex justify-center items-center transition-colors"
             disabled={loading}
           >
             {loading ? (
