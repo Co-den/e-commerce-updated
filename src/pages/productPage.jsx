@@ -73,14 +73,14 @@ const ProductPage = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-orange drop-shadow-lg">
+            <h2 className="text-black text-4xl font-bold drop-shadow-lg">
               {product.name}
             </h2>
-            <p className="text-green mt-4">{product.description}</p>
+            <p className="text-black mt-4">{product.description}</p>
             <p className="text-lg text-gray-900 mt-2">${product.price}</p>
 
             <div className="mt-6">
-              <label htmlFor="quantity" className="mr-2 text-green">
+              <label htmlFor="quantity" className="mr-2 text-black">
                 Quantity:
               </label>
               <input
@@ -111,7 +111,7 @@ const ProductPage = () => {
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
               onClick={handleAddToCart}
-              className="mt-6 bg-orange text-white py-3 px-6 rounded-lg text-lg hover:bg-yellow hover:text-white transition-all duration-300 shadow-lg"
+              className="mt-6 bg-red-700 text-white py-3 px-6 rounded-lg text-lg hover:bg-yellow hover:text-white transition-all duration-300 shadow-lg"
             >
               {isAddingToCart ? (
                 <>

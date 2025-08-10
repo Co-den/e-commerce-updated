@@ -148,7 +148,7 @@ const Home = () => {
                   setIsNavigating(true);
                   setTimeout(() => navigate("/products"), 800);
                 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-green hover:bg-red-600 transition-colors disabled:opacity-50"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-white bg-red-700 hover:bg-red-600 transition-colors disabled:opacity-50"
                 disabled={isNavigating}
               >
                 {isNavigating ? (
@@ -252,7 +252,7 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-darkGreen mb-3">
                 Book Us for Farming Advice
               </h3>
-              <p className="text-green font-medium mb-4">
+              <p className="font-medium mb-4">
                 Get expert tips on crop cultivation, livestock management, and
                 sustainable farming practices from our seasoned agricultural
                 professionals.
@@ -261,7 +261,7 @@ const Home = () => {
             <div>
               <button
                 onClick={() => navigate("/booking")}
-                className="mt-4 w-full bg-green text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
+                className="mt-4 w-full bg-red-700 text-white py-3 rounded-md font-bold hover:bg-orange-700 transition-colors"
               >
                 Book Now
               </button>
@@ -301,7 +301,7 @@ const Home = () => {
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-4">
-                    <h3 className="text-orange text-xl font-semibold">
+                    <h3 className="text-xl font-semibold">
                       {product.name}
                     </h3>
                     <p className="mt-2 text-orange-600 font-bold">
@@ -310,7 +310,7 @@ const Home = () => {
                     <button
                       onClick={() => handleAddToCart(product)}
                       disabled={isAddingToCart}
-                      className="mt-4 w-full bg-green text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
+                      className="mt-4 w-full bg-red-700 text-white py-2 rounded-md hover:bg-orange-700 transition-colors disabled:opacity-50"
                     >
                       {isAddingToCart ? "Adding..." : "Add to Cart"}
                     </button>
