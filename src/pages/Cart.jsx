@@ -12,7 +12,7 @@ const Cart = () => {
 
   return (
     <div className="container mx-auto p-4 min-h-screen bg-white">
-      <h1 className="text-3xl font-bold mb-8 text-green">Your Shopping Cart</h1>
+      <h1 className="text-3xl font-bold mb-8 text-darkGreen">Your Shopping Cart</h1>
 
       {cartItems.length === 0 ? (
         <div className="text-center py-12">
@@ -96,7 +96,7 @@ const Cart = () => {
 
           {/* Order Summary */}
           <div className="bg-white text-black p-6 rounded-lg shadow-sm h-fit sticky top-4">
-            <h2 className="text-xl font-bold mb-4 text-lemon">Order Summary</h2>
+            <h2 className="text-xl font-bold mb-4 text-black">Order Summary</h2>
             <div className="space-y-3 mb-6">
               <div className="flex justify-between">
                 <span className="text-green">
@@ -120,7 +120,7 @@ const Cart = () => {
 
             <Link
               to="/checkout"
-              className="inline-block w-full bg-orange text-white text-center font-bold py-3 rounded-lg mt-6 hover:bg-yellow transition-colors"
+              className="inline-block w-full bg-darkGreen text-white text-center font-bold py-3 rounded-lg mt-6 hover:bg-green transition-colors"
             >
               Proceed to Checkout
             </Link>

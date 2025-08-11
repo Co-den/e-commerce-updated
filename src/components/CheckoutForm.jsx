@@ -235,7 +235,7 @@ const CheckoutForm = ({ cartTotal }) => {
         <button
           type="submit"
           disabled={!stripe || isProcessing}
-          className={`w-full py-4 px-8 bg-orange hover:bg-yellow rounded-xl font-bold text-black transition duration-200 ease-in-out ${
+          className={`w-full py-4 px-8 bg-darkGreen hover:bg-green rounded-xl font-bold text-white transition duration-200 ease-in-out ${
             isProcessing ? "opacity-50 cursor-not-allowed" : ""
           }`}
         >
