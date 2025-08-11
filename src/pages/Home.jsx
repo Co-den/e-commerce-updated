@@ -184,7 +184,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      {/* Featured Categories */}
+      {/* Shop by Category */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -194,28 +194,42 @@ const Home = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-2xl font-bold text-red-700 mb-8"
+          className="text-3xl font-extrabold text-darkGreen mb-10 text-center"
         >
           Shop by Category
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category) => (
             <motion.div
               key={category.slug}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
+              className="group"
             >
               <Link
                 to={`/category/${category.slug}`}
-                className="bg-darkGreen rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all block border border-yellow-100"
               >
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-white">
+                {/* Category Image */}
+                <div className="relative h-44">
+                  <img
+                    src={`/images/categories/${category.slug}.jpg`}
+                    alt={category.name}
+                    className="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+                  />
+                  <span className="absolute top-3 left-3 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                    {category.name}
+                  </span>
+                </div>
+
+                {/* Text */}
+                <div className="p-5 text-center">
+                  <h3 className="text-lg font-bold text-darkGreen mb-1">
                     {category.name}
                   </h3>
-                  <p className="mt-2 text-sm text-white font-bold">
+                  <p className="text-sm text-gray-600">
                     Explore our {category.name.toLowerCase()} collection
                   </p>
                 </div>
@@ -224,6 +238,7 @@ const Home = () => {
           ))}
         </div>
       </motion.div>
+
       {/* Farming Advice Booking Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -301,9 +316,7 @@ const Home = () => {
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-4">
-                    <h3 className="text-xl font-semibold">
-                      {product.name}
-                    </h3>
+                    <h3 className="text-xl font-semibold">{product.name}</h3>
                     <p className="mt-2 text-orange-600 font-bold">
                       ${product.price}
                     </p>
