@@ -7,7 +7,7 @@ export async function getProductSuggestion(productName) {
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const result = await model.generateContent(
-      `Give me a short, catchy marketing suggestion or interesting fact for this product: ${productName}`
+      `Give me a short, source for this product: ${productName}`
     );
 
     // Safety check in case the response is missing
