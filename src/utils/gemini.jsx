@@ -1,38 +1,24 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Initialize Gemini API
-const genAI = new GoogleGenAI({
-  apiKey: "AIzaSyD1XHXG6o0kUZPICnLs1E-vzXxMaHVc2RE",
-});
+const genAI = new GoogleGenerativeAI("AIzaSyD1XHXG6o0kUZPICnLs1E-vzXxMaHVc2RE");
 
 export async function getProductSuggestion(productName) {
   try {
-    // Call Gemini to get a product suggestion
-    const result = await genAI.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: [
-        {
-          role: "user",
-          parts: [
-            {
-              text: `Give me a short, catchy marketing suggestion or interesting fact for this product: ${productName}`,
-            },
-          ],
-        },
-      ],
-      generationConfig: {
-        maxOutputTokens: 50,
-        temperature: 0.7,
-      },
-    });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-    // Extract and return the text response
-    const response = await result.response;
-    const text = response.text();
+    const result = await model.generateContent(
+      `Give me a short, catchy marketing suggestion or interesting fact for this product: ${productName}`
+    );
 
+    // Safety check in case the response is missing
+    if (!result || !result.response) {
+      throw new Error("No response from Gemini API");
+    }
+
+    const text = result.response.text();
     return text;
   } catch (error) {
-    console.error("Gemini API error:", error);
+    console.error("Gemini API error:", error.message || error);
     return "Could not fetch AI suggestion.";
   }
 }
