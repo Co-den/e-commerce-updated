@@ -23,8 +23,10 @@ import OrderConfirmation from "./pages/OrderConfirmation";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { initializeAuth } from "./redux/authSlice";
-import "./App.css";
 import Settings from "./pages/Setting";
+import CustomerService from "./pages/CustomerService";
+import "./App.css";
+
 
 const MainLayout = () => {
   const location = useLocation();
@@ -55,6 +57,7 @@ const MainLayout = () => {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/customer-service" element={<CustomerService />} />
         </Routes>
       </main>
     </div>
