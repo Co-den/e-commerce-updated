@@ -20,7 +20,7 @@ const Cart = () => {
           <p className="text-xl text-green mb-4">Your cart is empty</p>
           <Link
             to="/products"
-            className="inline-block bg-orange text-white px-6 py-3 rounded-lg hover:bg-yellow transition-colors"
+            className="inline-block bg-darkGreen text-white px-6 py-3 rounded-lg hover:bg-green transition-colors"
           >
             Continue Shopping
           </Link>
