@@ -23,7 +23,7 @@ const CustomerService = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">Customer Service</h1>
+      <h1 className="text-3xl text-darkGreen font-bold mb-4">Customer Service</h1>
       <p className="mb-6">
         We’re here to help you with orders, payments, shipping, and more.
       </p>
@@ -31,14 +31,14 @@ const CustomerService = () => {
       <div className="bg-gray-100 p-4 rounded-lg mb-6">
         <h2 className="font-semibold">Contact Us</h2>
         <ul className="list-disc pl-5">
-          <li>Email: support@yourstore.com</li>
-          <li>Phone: +234 800 000 0000</li>
+          <li>Email: agrify@gmail.com</li>
+          <li>Phone: +234 90 393 54723</li>
           <li>Live Chat: Available Mon–Fri, 9am–6pm</li>
         </ul>
       </div>
 
       <div className="bg-white p-4 rounded-lg shadow">
-        <h2 className="font-semibold mb-2">Ask Our AI Assistant</h2>
+        <h2 className="font-semibold text-green mb-2">Ask Our AI Assistant</h2>
         <textarea
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
@@ -47,7 +47,7 @@ const CustomerService = () => {
         />
         <button
           onClick={handleAsk}
-          className="bg-blue-600 text-white px-4 py-2 rounded"
+          className="bg-green text-white px-4 py-2 rounded"
           disabled={loading}
         >
           {loading ? "Thinking..." : "Ask"}

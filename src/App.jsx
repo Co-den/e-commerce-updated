@@ -25,6 +25,8 @@ import { useDispatch } from "react-redux";
 import { initializeAuth } from "./redux/authSlice";
 import Settings from "./pages/Setting";
 import CustomerService from "./pages/CustomerService";
+import Returns from "./pages/ReturnPage";
+import FAQ from "./pages/FAQ";
 import "./App.css";
 
 
@@ -57,7 +59,9 @@ const MainLayout = () => {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/customer-service" element={<CustomerService />} />
+          <Route path="/contact" element={<CustomerService />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/returns" element={<Returns />} />
         </Routes>
       </main>
     </div>
