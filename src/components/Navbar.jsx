@@ -64,14 +64,12 @@ const Navbar = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-inter text-darkGreen tracking-wider glow-text"
+            className="text-2xl font-inter text-darkGreen"
           >
             🐔Agrify
           </Link>
 
-          {/* Desktop: Search + Links */}
           <div className="hidden md:flex items-center space-x-6">
-            {/* Search form */}
             <form onSubmit={handleSearchSubmit} className="relative">
               <input
                 type="text"

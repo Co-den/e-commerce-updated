@@ -29,7 +29,7 @@ const FAQ = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
+      <h1 className="text-3xl text-green font-bold mb-4">Frequently Asked Questions</h1>
 
       <div className="mb-6">
         {faqList.map((item, idx) => (

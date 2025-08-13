@@ -23,7 +23,7 @@ const CustomerService = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl text-darkGreen font-bold mb-4">Customer Service</h1>
+      <h1 className="text-3xl text-green font-bold mb-4">Customer Service</h1>
       <p className="mb-6">
         We’re here to help you with orders, payments, shipping, and more.
       </p>

@@ -3,12 +3,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-<<<<<<< HEAD
 
 
-/* 4. Tailwind Custom Components */
-=======
->>>>>>> 0172229ced7c368f8b74975afddfc62f5644cb70
+@font-face {
+  font-family: 'inter';
+  src: url('/fonts/Wosker Demo.otf') format('otf'),
+       url('/fonts/Wosker Demo.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @layer components {
   .btn {
     @apply bg-blue-500 text-white px-4 py-2 rounded-md 
