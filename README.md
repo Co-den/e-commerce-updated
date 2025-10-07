@@ -54,17 +54,23 @@
 git clone https://github.com/Co-den/e-commerce-updated.git
 cd agrify
 
+```
 //FRONTEND
+```
 cd frontend
 npm install
 npm run dev
-
+```
 //BACKEND
+```
 cd ../backend
 npm install
 npm run dev
 
-
+```
+---
+## Project Structure 
+```
 agrify/
 ├── frontend/          # React frontend
 │   └── src/
@@ -76,7 +82,7 @@ agrify/
 │   └── utils/
 ├── screenshots/       # App screenshots
 └── README.md
-
+```
 ---
 
 ## 🙋‍♂️ Author
